@@ -1,8 +1,15 @@
-<html>
+<html ng-app="app">
 <head>
+<meta charset="utf-8">
 	<title></title>
+	<script type="text/javascript" scr="js/angular.min.js"></script>
+	<script type="text/javascript" scr="js/angular-route.js"></script>
+	<script type="text/javascript" scr="js/app.js"></script>
+	<script type="text/javascript" scr="js/index.controller.js"></script>
+	<script type="text/javascript" scr="js/index.factory.js"></script>
 </head>
-<body>
-
+</head>
+<body ng-controller ="Controller as Contr">
+   <div ng-view></div>
 </body>
 </html>
