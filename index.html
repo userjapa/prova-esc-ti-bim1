@@ -1,8 +1,26 @@
-<html>
+<html ng-app="app">
 <head>
-	<title></title>
+	<title>PROVA ESC TI BIM1</title>
 </head>
-<body>
+<body ng-controller="Controller">
+	<p><a href="#!/cadastro">Efetuar Pedido</a> <a href="#!/manterProduto">Manter Produto</a> <a href="#!/">Help</a> </p>
 
+	<button ng-click="teste() teste2()">TESTE</button>
+
+	<table>
+		<tr ng-repeat="x in nomes track by $index">
+			<td>{{nomes}}</td>
+			<td><button ng-click="remover($index)">EXCLUIR</button><td>
+			<td><button ng-click="editar(x, $index)">EDITAR</button></td>
+		</tr>
+	</table>
+
+	<div ng-view></div>
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/index.controller.js"></script>
+	<script type="text/javascript" src="js/index.factory.js"></script>
 </body>
 </html>
